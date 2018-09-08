@@ -166,7 +166,7 @@ printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Setting %s to monitor mode\n" $cho
 iwconfig $choosed_interface mode monitor
 sleep 4
 printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] %s Up\n" $choosed_interface 
-ifconfig wlan0 up
+ifconfig $choosed_interface  up
 sleep 5
 hostapd hostapd.conf > /dev/null 2>&1 &
 sleep 6
